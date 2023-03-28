@@ -5,7 +5,6 @@
 	ears = /obj/item/radio/headset
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/vest/ctf
-	toggle_helmet = FALSE // see the whites of their eyes
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/combat
 	id = /obj/item/card/id/away
@@ -55,7 +54,7 @@
 	if(has_radio)
 		var/obj/item/radio/headset = human_to_equip.ears
 		headset.set_frequency(team_radio_freq)
-		headset.freqlock = TRUE
+		headset.freqlock = RADIO_FREQENCY_LOCKED
 		headset.independent = TRUE
 	human_to_equip.dna.species.stunmod = 0
 
